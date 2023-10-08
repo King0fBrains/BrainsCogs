@@ -641,6 +641,9 @@ class AdvancedLock(commands.Cog):
                             await ctx.channel.set_permissions(
                                 ro, read_messages=True, send_messages=True
                             )
+                            await ctx.channel.set_permissions(
+                                everyone, read_messages=True, send_messages=False
+                            )
             await ctx.channel.set_permissions(
                 mods, read_messages=True, send_messages=True
             )
